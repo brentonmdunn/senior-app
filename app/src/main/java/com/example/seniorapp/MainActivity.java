@@ -19,7 +19,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button showButton;
-    private TextView nameText;
+    private Button freshmanLabButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +29,19 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         showButton = findViewById(R.id.AHHHHH);
-        nameText = findViewById(R.id.myText);
+        freshmanLabButton = findViewById(R.id.freshmanLabButton);
 
         showButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openAboutPage();
+            }
+        });
+
+        freshmanLabButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openFreshmanLabPage();
             }
         });
 
@@ -50,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openAboutPage() {
         Intent intent = new Intent(this, About.class);
+        startActivity(intent);
+    }
+
+    public void openFreshmanLabPage() {
+        Intent intent = new Intent(this, FreshmanLab.class);
         startActivity(intent);
     }
 
