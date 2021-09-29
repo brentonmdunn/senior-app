@@ -1,5 +1,6 @@
 package com.example.seniorapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,10 +13,13 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button showButton;
+    private TextView nameText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +29,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         showButton = findViewById(R.id.AHHHHH);
+        nameText = findViewById(R.id.myText);
 
         showButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nameText.setText("Hello");
+                openAboutPage();
             }
         });
 
@@ -41,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void openAboutPage() {
+        Intent intent = new Intent(this, About.class);
+        startActivity(intent);
     }
 
     @Override

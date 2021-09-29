@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/aboutText"
+        android:layout_width="176dp"
+        android:layout_height="500dp"
+        android:text="Computer Science (CS) is the design of computers, computational processes and information transfer. CS engineers design and analyze software for many different applications, including networks, graphics, artificial intelligences and database systems. They design next-generation computer systems, computer networking, biomedical information systems, gaming systems, search engines, web browsers and computerized package distribution systems. Electrical Engineering (EE) focuses on the study and applications of electricity and magnetism.
+
+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
