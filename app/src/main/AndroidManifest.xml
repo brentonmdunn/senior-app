@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeniorApp">
         <activity
+            android:name=".FreshmanLab"
+            android:label="@string/title_activity_freshman_lab"
+            android:theme="@style/Theme.SeniorApp.NoActionBar"></activity>
+        <activity
             android:name=".About"
             android:label="@string/title_activity_about"
-            android:theme="@style/Theme.SeniorApp.NoActionBar"></activity>
+            android:theme="@style/Theme.SeniorApp.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
